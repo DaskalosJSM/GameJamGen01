@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class movementPlatform : MonoBehaviour
 {
-    [SerializeField] Transform inicialPosition;
-    [SerializeField] GameObject objectivePosition;
-    [SerializeField] GameObject platform;
-    private Vector3 direccion;
-    public float platformVelocity = 2;
+    public List<Transform> waypoints;
+    public float moveSpeed;
+    public int target;
     // Start is called before the first frame update
-    void Start()
-    {
-        inicialPosition = GetComponent<Transform>();
-    }
-
     // Update is called once per frame
     void Update()
     {
-        platform.transform.Translate(direccion*Time.deltaTime*platformVelocity);
-        if(platform.transform.position == inicialPosition.position)
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[target].position, moveSpeed * Time.deltaTime);
+    }
+    private void FixedUpdate()
+    {
+        if (transform.position == waypoints[target].position)
         {
-            direccion = new Vector3(1,0,0);
+            if (target == waypoints.Count - 1)
+            {
+                target = 0;
+            }
+            else
+            {
+                target += 1;
+            }
         }
-        if (platform.transform.position == objectivePosition.transform.position)
-        {
-            direccion = new Vector3(-1,0,0);
-        }
-        Debug.Log(direccion);
     }
 }

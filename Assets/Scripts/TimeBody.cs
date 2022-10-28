@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class TimeBody : MonoBehaviour
 {
-
     bool isRewinding = false;
-
     public Vector3 Oriposition;
-
     public float recordTime = 5f;
-
-
     public List<PointInTime> pointsInTime;
-
     Rigidbody rb;
+    public bool isKinematicObstacle = false;
     public bool gravity;
     private float Gvalue;
     public bool Fall = true;
-
     // Use this for initialization
     void Start()
     {
@@ -26,7 +20,6 @@ public class TimeBody : MonoBehaviour
         pointsInTime = new List<PointInTime>();
         rb = GetComponent<Rigidbody>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +30,11 @@ public class TimeBody : MonoBehaviour
         else
         {
             Gvalue = -9.6F;
+        }
+        if (isKinematicObstacle)
+        {
+            Gvalue = 0;
+            rb.isKinematic = true;
         }
         if (Fall == true)
         {
@@ -51,7 +49,6 @@ public class TimeBody : MonoBehaviour
             rb.isKinematic = false;
         rb.constraints = RigidbodyConstraints.None;
     }
-
     void FixedUpdate()
     {
         if (isRewinding)
@@ -59,7 +56,6 @@ public class TimeBody : MonoBehaviour
         else
             Record();
     }
-
     void Rewind()
     {
         if (pointsInTime.Count > 0)
@@ -73,9 +69,7 @@ public class TimeBody : MonoBehaviour
         {
             StopRewind();
         }
-
     }
-
     void Record()
     {
         if (pointsInTime.Count > Mathf.Round(recordTime / Time.fixedDeltaTime))
@@ -85,20 +79,17 @@ public class TimeBody : MonoBehaviour
 
         pointsInTime.Insert(0, new PointInTime(transform.position, transform.rotation));
     }
-
     public void StartRewind()
     {
         isRewinding = true;
         rb.isKinematic = true;
     }
-
     public void StopRewind()
     {
         isRewinding = false;
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints.FreezeAll;
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
