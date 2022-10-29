@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\TimeBody.cs" />
      <Compile Include="Assets\Scripts\PointInTime.cs" />
      <Compile Include="Assets\Scripts\RecolectableItem.cs" />
+     <Compile Include="Assets\Scripts\PauseGame.cs" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
