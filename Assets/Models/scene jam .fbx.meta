@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 2840acaa943a2974795fbef88beb3b43
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -6766683219296929717
+    second: Gear.002|GearAction.004
+  - first:
+      74: -8713327165214435195
+    second: Gear.002|GearAction.005
+  - first:
+      74: 8189951680272308362
+    second: Gear.002|GearAction.007
+  - first:
+      74: -696967480497153644
+    second: Gear.002|GearAction.008
+  - first:
+      74: 7814382748003832843
+    second: Gear.002|GearAction.009
+  - first:
+      74: -3247690866632266592
+    second: Gear.002|GearAction.010
+  - first:
+      74: -5622814059952282758
+    second: Gear.003|GearAction.004
+  - first:
+      74: 7264192896652974776
+    second: Gear.003|GearAction.005
+  - first:
+      74: 297381755387030931
+    second: Gear.003|GearAction.007
+  - first:
+      74: -5288361919272633083
+    second: Gear.003|GearAction.008
+  - first:
+      74: 6495791800736064597
+    second: Gear.003|GearAction.009
+  - first:
+      74: 9181159208019185505
+    second: Gear.003|GearAction.010
+  - first:
+      74: 4558194671028824574
+    second: Gear.004|GearAction.004
+  - first:
+      74: 3806675012585279885
+    second: Gear.004|GearAction.005
+  - first:
+      74: 8539686788729658752
+    second: Gear.004|GearAction.007
+  - first:
+      74: -5266207894146708432
+    second: Gear.004|GearAction.008
+  - first:
+      74: 7781266151767064026
+    second: Gear.004|GearAction.009
+  - first:
+      74: -2814917589939463913
+    second: Gear.004|GearAction.010
+  - first:
+      74: 5589344121801819353
+    second: Gear.005|GearAction.004
+  - first:
+      74: 605140469642511625
+    second: Gear.005|GearAction.005
+  - first:
+      74: 1131759527174225542
+    second: Gear.005|GearAction.007
+  - first:
+      74: 1345691433726041502
+    second: Gear.005|GearAction.008
+  - first:
+      74: -4145452581671030794
+    second: Gear.005|GearAction.009
+  - first:
+      74: 1725553873777114553
+    second: Gear.005|GearAction.010
+  - first:
+      74: 5962121583526857218
+    second: Gear.007|GearAction.004
+  - first:
+      74: -6249000498285312230
+    second: Gear.007|GearAction.005
+  - first:
+      74: 4734101763968375370
+    second: Gear.007|GearAction.007
+  - first:
+      74: -3347204175381654833
+    second: Gear.007|GearAction.008
+  - first:
+      74: -7367137741448599723
+    second: Gear.007|GearAction.009
+  - first:
+      74: -2954074010822051381
+    second: Gear.007|GearAction.010
+  - first:
+      74: -4134422184535569239
+    second: Gear.008|GearAction.004
+  - first:
+      74: -1981541772903463522
+    second: Gear.008|GearAction.005
+  - first:
+      74: 270606218908439353
+    second: Gear.008|GearAction.007
+  - first:
+      74: 5913476262988822898
+    second: Gear.008|GearAction.008
+  - first:
+      74: 2584821087744927361
+    second: Gear.008|GearAction.009
+  - first:
+      74: 3995189807903546425
+    second: Gear.008|GearAction.010
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
