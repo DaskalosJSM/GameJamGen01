@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats estadisticas;
-    public Transform spawn;
     public float MaxSpeed;
     private Rigidbody rb;
     public float Playervelocity;
@@ -15,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public float JumpforceDown;
     public bool IsGrounded;
     public float jumpvelocity = 5f;
-
     public int jumCount;
 
     // Start is called before the first frame update
@@ -101,11 +99,6 @@ public class PlayerController : MonoBehaviour
         {
             jumCount = 1;
             IsGrounded = true;
-        }
-        if (collision.gameObject.tag == "DeathZone")
-        {
-            estadisticas.vidas -= 1;
-            this.transform.position = spawn.transform.position;
         }
     }
 
