@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CollectablesScrips\RecolectableItem.cs" />
      <Compile Include="Assets\Scripts\UIscripts\FinishLine.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\UIscripts\UIStats.cs" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

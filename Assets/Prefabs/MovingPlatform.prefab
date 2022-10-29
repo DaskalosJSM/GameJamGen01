@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7033908644757001832}
   - component: {fileID: 7033908644757001835}
   m_Layer: 0
-  m_Name: Platformgraf
+  m_Name: MovingPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
