@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (vidas == 0)
         {
-            Manager.PrincipalMenu();
+            Manager.GameOver();
         }
     }
     private void OnCollisionEnter(Collision other)

@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Star
   - DeathZone
+  - Wall
   layers:
   - Default
   - TransparentFX

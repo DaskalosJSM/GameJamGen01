@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c8de326efb67824fbba70bd63bdbdad
+guid: 985439cfde68af04983ecd6c61cb6133
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -39,8 +39,8 @@ ModelImporter:
       name: Jumping
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 0
-      lastFrame: 21
+      firstFrame: 4
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
