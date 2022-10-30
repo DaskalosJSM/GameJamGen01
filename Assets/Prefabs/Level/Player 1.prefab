@@ -332,8 +332,8 @@ MonoBehaviour:
   MaxSpeed: 4
   Playervelocity: 4
   gravity: 1
-  Gvalue: 10
-  JumpforceUp: 4.6
+  Gvalue: 9
+  JumpforceUp: 5
   JumpforceDown: -10
   IsGrounded: 0
   jumpvelocity: 0.8

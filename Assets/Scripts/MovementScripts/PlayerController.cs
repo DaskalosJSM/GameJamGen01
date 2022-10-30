@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector3(0, Gvalue, 0), ForceMode.Acceleration);
             float horizontalInputJump = Input.GetAxis("Horizontal") * jumpvelocity;
             rb.AddForce(new Vector3(horizontalInputJump, 0, 0), ForceMode.Impulse);
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, MaxSpeed);
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, MaxSpeed*2f);
         }
         //Jump & doblejump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded == true)
@@ -150,6 +150,12 @@ public class PlayerController : MonoBehaviour
             jumCount = 1;
             IsGrounded = true;
         }
+        if (collision.gameObject.tag == "platform")
+        {
+            this.transform.SetParent(collision.gameObject.transform);
+            jumCount = 1;
+            IsGrounded = true;
+        }
     }
 
     //consider when character is jumping .. it will exit collision.
@@ -164,6 +170,11 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("IsClimbing", false);
             Climbing = false;
+        }
+        if (collision.gameObject.tag == "platform")
+        {
+            this.transform.SetParent(null);
+            IsGrounded = false;
         }
     }
 }

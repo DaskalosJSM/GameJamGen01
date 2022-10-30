@@ -5,9 +5,9 @@ using UnityEngine;
 public class RespawnPlatform : MonoBehaviour
 {
     public float TimeToRespawn = 4;
-    public float CurrentToRespawn;
+    private float CurrentToRespawn;
     [SerializeField] bool IsGrounded = false;
-    public Vector3 spawn;
+    private  Vector3 spawn;
     void Start() {
          spawn = this.transform.position ;
          CurrentToRespawn = TimeToRespawn;
