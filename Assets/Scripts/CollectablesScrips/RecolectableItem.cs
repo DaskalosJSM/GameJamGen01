@@ -6,15 +6,14 @@ public class RecolectableItem : MonoBehaviour
 {
 
     public PlayerStats estadisticas;
-    public GameObject collecionable;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && collecionable.gameObject.tag == "Coin")
+        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Coin")
         {
             estadisticas.coins += 1;
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "Player" && collecionable.gameObject.tag == "Star")
+        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Star")
         {
             estadisticas.stars += 1;
             Destroy(gameObject);

@@ -19,7 +19,6 @@ public class PlayerStats : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(vidaActual);
         muerte();
     }
     void muerte()

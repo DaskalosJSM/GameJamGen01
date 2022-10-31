@@ -47,7 +47,6 @@ public class SliderUI : MonoBehaviour
         }
         if (CurrentTime >= MaxTimer && IsRewinding == false && IsPaused == false)
         {
-            Debug.Log("reinicio");
             CurrentTime = 0;
         }
 

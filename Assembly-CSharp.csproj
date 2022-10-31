@@ -53,6 +53,10 @@
      <Compile Include="Assets\Scripts\MovementScripts\PointInTime.cs" />
      <Compile Include="Assets\Scripts\CollectablesScrips\RecolectableItem.cs" />
      <Compile Include="Assets\Scripts\UIscripts\FinishLine.cs" />
+<<<<<<< Updated upstream
+=======
+     <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
+>>>>>>> Stashed changes
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

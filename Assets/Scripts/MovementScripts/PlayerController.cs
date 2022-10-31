@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb.AddForce(new Vector3(0, Gvalue, 0), ForceMode.Acceleration);
-        Debug.Log(rb.velocity.x);
         float horizontalInput = Input.GetAxis("Horizontal");
         //Animations states
         if (Input.GetKeyDown(KeyCode.Space) && Climbing == true)
@@ -107,22 +106,22 @@ public class PlayerController : MonoBehaviour
         {
             jumCount = jumCount - 1;
             Jump();
-            anim.SetBool("IsJumping", true);
             if (gravity == true)
             {
                 // Movement in mid air
-                rb.AddForce(new Vector3(0, JumpforceUp/3 , 0), ForceMode.VelocityChange);
+                rb.AddForce(new Vector3(0, JumpforceUp / 3, 0), ForceMode.VelocityChange);
             }
             if (gravity == false)
             {
-                rb.AddForce(new Vector3(0, JumpforceDown/3, 0), ForceMode.VelocityChange);
+                rb.AddForce(new Vector3(0, JumpforceDown / 3, 0), ForceMode.VelocityChange);
             }
         }
     }
     void Jump()
     {
-        IsGrounded = false;
         anim.SetBool("IsJumping", true);
+        anim.SetBool("IsFalling", true);
+        IsGrounded = false;
         if (gravity == true)
         {
             // Movement in mid air
@@ -135,15 +134,17 @@ public class PlayerController : MonoBehaviour
     }
     void Move()
     {
+        anim.SetBool("IsMoving", true);
+        anim.SetBool("IsJumping", false);
         float PlayerVelocityM = rb.velocity.x;
         float horizontalInputGround = Input.GetAxis("Horizontal");
-        anim.SetBool("IsMoving", true);
         rb.AddForce(new Vector3(horizontalInputGround, 0, 0), ForceMode.Impulse);
         rb.AddForce(new Vector3(0, Gvalue, 0), ForceMode.Acceleration);
         rb.velocity = new Vector3(Mathf.Clamp(PlayerVelocityM, -MaxSpeed, MaxSpeed), rb.velocity.y, rb.velocity.z);
     }
     void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.tag == "Wall")
         {
             jumCount = 1;
@@ -161,6 +162,18 @@ public class PlayerController : MonoBehaviour
             jumCount = 1;
             IsGrounded = true;
         }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        Debug.Log(anim.GetBool("IsClimbing"));
+        if (other.gameObject.tag == "Wall")
+        {
+            anim.SetBool("IsClimbing", true);
+            jumCount = 1;
+            Climbing = true;
+        }
+
     }
 
     //consider when character is jumping .. it will exit collision.
