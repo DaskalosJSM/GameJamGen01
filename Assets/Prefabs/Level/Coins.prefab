@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estadisticas: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 806510aac402c2c4cb2b8b6a7a412183, type: 3}
 --- !u!135 &584907073562261251
 SphereCollider:
   m_ObjectHideFlags: 0

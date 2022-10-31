@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     public bool IsGrounded;
 
     public int jumCount;
-
     // Start is called before the first frame update
     void Start()
     {
