@@ -970,7 +970,7 @@ MonoBehaviour:
   MaxSpeed: 5
   gravity: 1
   Gvalue: 9
-  JumpforceUp: 5
+  JumpforceUp: 8
   JumpforceDown: -10
   IsGrounded: 0
   jumCount: 1

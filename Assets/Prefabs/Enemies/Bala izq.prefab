@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1418375577633855372}
   - component: {fileID: 1418375577633855375}
   - component: {fileID: 7349605878829491763}
+  - component: {fileID: 4462863197759411546}
+  - component: {fileID: 2461690064477273526}
   m_Layer: 0
   m_Name: Bala izq
   m_TagString: DeathZone
@@ -126,3 +128,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6622699, y: 0.6622699, z: 0.6622699}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4462863197759411546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418375577633855374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65208bb0c8006146bb03a5d5f024302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Oriposition: {x: 0, y: 0, z: 0}
+  recordTime: 2
+  isKinematicObstacle: 1
+  gravity: 0
+  Fall: 1
+--- !u!54 &2461690064477273526
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418375577633855374}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
