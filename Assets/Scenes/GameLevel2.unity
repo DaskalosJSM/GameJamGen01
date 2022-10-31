@@ -1590,11 +1590,11 @@ PrefabInstance:
     - target: {fileID: 4787509379526484695, guid: 7d9b948448973ed499182d6235762845, type: 3}
       propertyPath: spawn
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 928356807}
     - target: {fileID: 4787509379526484695, guid: 7d9b948448973ed499182d6235762845, type: 3}
       propertyPath: Manager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 336845197}
     - target: {fileID: 4787509379526484695, guid: 7d9b948448973ed499182d6235762845, type: 3}
       propertyPath: vidaui.Array.data[0]
       value: 

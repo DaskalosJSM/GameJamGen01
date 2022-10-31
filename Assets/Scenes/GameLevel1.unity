@@ -4254,6 +4254,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2333537033068107915}
     m_Modifications:
+    - target: {fileID: 4787509379526484685, guid: 7d9b948448973ed499182d6235762845, type: 3}
+      propertyPath: MaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787509379526484685, guid: 7d9b948448973ed499182d6235762845, type: 3}
+      propertyPath: JumpforceUp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787509379526484685, guid: 7d9b948448973ed499182d6235762845, type: 3}
+      propertyPath: jumpvelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787509379526484685, guid: 7d9b948448973ed499182d6235762845, type: 3}
+      propertyPath: Playervelocity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4787509379526484686, guid: 7d9b948448973ed499182d6235762845, type: 3}
       propertyPath: m_Name
       value: Player 1

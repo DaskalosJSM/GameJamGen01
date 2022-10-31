@@ -18,14 +18,13 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float MaxSpeed;
     private Rigidbody rb;
-    public float Playervelocity;
     public bool gravity;
     [SerializeField] float Gvalue;
     private float gravityVuale;
     public float JumpforceUp;
     public float JumpforceDown;
     public bool IsGrounded;
-    public float jumpvelocity;
+
     public int jumCount;
 
     // Start is called before the first frame update
@@ -42,9 +41,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        float horizontalInput = Input.GetAxis("Horizontal") * Playervelocity;
-
+        rb.AddForce(new Vector3(0, Gvalue, 0), ForceMode.Acceleration);
+        Debug.Log(rb.velocity.x);
+        float horizontalInput = Input.GetAxis("Horizontal");
         //Animations states
         if (Input.GetKeyDown(KeyCode.Space) && Climbing == true)
         {
@@ -84,16 +83,20 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("IsMoving", false);
             anim.SetBool("IsFalling", false);
             anim.SetBool("IsClimbing", false);
-            rb.velocity = Vector3.zero;
+
+            rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
+
         }
         else if (IsGrounded == false)
         {
-
             //Movimineto en el aire
+            float PlayerVelocity = rb.velocity.x;
+            float horizontalInputAir = Input.GetAxis("Horizontal");
+            rb.AddForce(new Vector3(horizontalInputAir, 0, 0), ForceMode.Impulse);
             rb.AddForce(new Vector3(0, Gvalue, 0), ForceMode.Acceleration);
-            float horizontalInputJump = Input.GetAxis("Horizontal") * jumpvelocity;
-            rb.AddForce(new Vector3(horizontalInputJump, 0, 0), ForceMode.Impulse);
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, MaxSpeed*2f);
+            rb.velocity = new Vector3(Mathf.Clamp(PlayerVelocity, -MaxSpeed, MaxSpeed), rb.velocity.y, rb.velocity.z);
+
+
         }
         //Jump & doblejump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded == true)
@@ -105,19 +108,20 @@ public class PlayerController : MonoBehaviour
             jumCount = jumCount - 1;
             Jump();
             anim.SetBool("IsJumping", true);
-        if (gravity == true)
-        {
-            // Movement in mid air
-            rb.AddForce(new Vector3(0, JumpforceUp*1.3f, 0), ForceMode.VelocityChange);
-        }
-        if (gravity == false)
-        {
-            rb.AddForce(new Vector3(0, JumpforceDown*1.3f, 0), ForceMode.VelocityChange);
-        }
+            if (gravity == true)
+            {
+                // Movement in mid air
+                rb.AddForce(new Vector3(0, JumpforceUp/3 , 0), ForceMode.VelocityChange);
+            }
+            if (gravity == false)
+            {
+                rb.AddForce(new Vector3(0, JumpforceDown/3, 0), ForceMode.VelocityChange);
+            }
         }
     }
     void Jump()
     {
+        IsGrounded = false;
         anim.SetBool("IsJumping", true);
         if (gravity == true)
         {
@@ -131,11 +135,12 @@ public class PlayerController : MonoBehaviour
     }
     void Move()
     {
+        float PlayerVelocityM = rb.velocity.x;
+        float horizontalInputGround = Input.GetAxis("Horizontal");
         anim.SetBool("IsMoving", true);
+        rb.AddForce(new Vector3(horizontalInputGround, 0, 0), ForceMode.Impulse);
         rb.AddForce(new Vector3(0, Gvalue, 0), ForceMode.Acceleration);
-        float horizontalInput = Input.GetAxis("Horizontal") * Playervelocity;
-        rb.AddForce(new Vector3(horizontalInput, 0, 0), ForceMode.Impulse);
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, MaxSpeed);
+        rb.velocity = new Vector3(Mathf.Clamp(PlayerVelocityM, -MaxSpeed, MaxSpeed), rb.velocity.y, rb.velocity.z);
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -163,7 +168,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            IsGrounded = false;
             anim.SetBool("IsFalling", true);
         }
         if (collision.gameObject.tag == "Wall")
@@ -174,7 +178,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "platform")
         {
             this.transform.SetParent(null);
-            IsGrounded = false;
         }
     }
 }
